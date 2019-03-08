@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/label_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Id" />
+
+        <EditText
+            android:id="@+id/txt_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Id do Cliente"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/label_cliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cliente" />
+
+        <EditText
+            android:id="@+id/txt_cliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nome do Cliente"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/label_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data" />
+
+        <EditText
+            android:id="@+id/txt_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Data"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/label_produtos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Produtos" />
+
+        <EditText
+            android:id="@+id/txt_produtos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Produtos"
+            android:inputType="textPersonName" />
+
+
+        <TextView
+            android:id="@+id/label_valor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Valor" />
+
+        <EditText
+            android:id="@+id/txt_valor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Valor"
+            android:inputType="textPersonName" />
+
+        <ListView
+            android:id="@+id/simpleListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#000"
+            android:dividerHeight="2dp"
+            android:listSelector="#600" />
+
+        <Button
+            android:id="@+id/btn_exibir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="add"
+            android:text="@string/btn_exibir" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
