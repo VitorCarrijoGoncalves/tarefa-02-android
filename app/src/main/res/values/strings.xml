@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tarefa01</string>
+    <string name="app_name">Tarefa02</string>
     <string name="label_cliente">Cliente</string>
     <string name="hint_cliente">hint_cliente</string>
     <string name="label_data">Data</string>
