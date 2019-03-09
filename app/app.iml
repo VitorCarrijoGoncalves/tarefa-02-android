@@ -141,6 +141,7 @@
     <orderEntry type="library" name="Gradle: android.arch.lifecycle:viewmodel-1.1.1" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:collections:28.0.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.retrofit2:converter-jackson:2.3.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.7.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:documentfile-28.0.0" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:cursoradapter-28.0.0" level="project" />

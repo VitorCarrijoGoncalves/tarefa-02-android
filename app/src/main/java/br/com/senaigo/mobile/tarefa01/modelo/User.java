@@ -4,6 +4,10 @@ import android.location.Address;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+
 public class User {
 
     private Integer id;
@@ -14,13 +18,19 @@ public class User {
 
     private String email;
 
-    private Address adrresses;
+//    @OneToMany(
+//            mappedBy = "user",
+//            cascade = CascadeType.REMOVE,
+//            orphanRemoval = true,
+//            targetEntity = Address.class,
+//            fetch = FetchType.LAZY)
+    private List<Address> adrresses;
 
     private String phone;
 
     private String website;
 
-    private Company company;
+    private List<Company> company;
 
     public Integer getId() {
         return id;
@@ -54,11 +64,11 @@ public class User {
         this.email = email;
     }
 
-    public Address getAdrresses() {
+    public List<Address> getAdrresses() {
         return adrresses;
     }
 
-    public void setAdrresses(Address adrresses) {
+    public void setAdrresses(List<Address> adrresses) {
         this.adrresses = adrresses;
     }
 
@@ -78,11 +88,11 @@ public class User {
         this.website = website;
     }
 
-    public Company getCompany() {
+    public List<Company> getCompany() {
         return company;
     }
 
-    public void setCompany(Company company) {
+    public void setCompany(List<Company> company) {
         this.company = company;
     }
 }

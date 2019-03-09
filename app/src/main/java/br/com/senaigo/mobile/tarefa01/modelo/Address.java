@@ -1,5 +1,7 @@
 package br.com.senaigo.mobile.tarefa01.modelo;
 
+import java.util.List;
+
 public class Address {
 
     private String id;
@@ -12,7 +14,7 @@ public class Address {
 
     private long zipcode;
 
-    private Geo geo;
+    private List<Geo> geo;
 
     public String getId() {
         return id;
@@ -54,11 +56,11 @@ public class Address {
         this.zipcode = zipcode;
     }
 
-    public Geo getGeo() {
+    public List<Geo> getGeo() {
         return geo;
     }
 
-    public void setGeo(Geo geo) {
+    public void setGeo(List<Geo> geo) {
         this.geo = geo;
     }
 }
