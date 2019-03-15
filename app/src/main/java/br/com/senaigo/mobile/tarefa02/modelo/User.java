@@ -1,12 +1,10 @@
-package br.com.senaigo.mobile.tarefa01.modelo;
+package br.com.senaigo.mobile.tarefa02.modelo;
 
 import android.location.Address;
 
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.persistence.CascadeType;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
+import java.util.List;
 
 public class User {
 
@@ -18,18 +16,14 @@ public class User {
 
     private String email;
 
-//    @OneToMany(
-//            mappedBy = "user",
-//            cascade = CascadeType.REMOVE,
-//            orphanRemoval = true,
-//            targetEntity = Address.class,
-//            fetch = FetchType.LAZY)
+    @JsonProperty("adrresses")
     private List<Address> adrresses;
 
     private String phone;
 
     private String website;
 
+    @JsonProperty("company")
     private List<Company> company;
 
     public Integer getId() {

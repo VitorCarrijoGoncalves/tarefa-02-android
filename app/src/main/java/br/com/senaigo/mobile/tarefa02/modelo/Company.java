@@ -1,4 +1,4 @@
-package br.com.senaigo.mobile.tarefa01.modelo;
+package br.com.senaigo.mobile.tarefa02.modelo;
 
 public class Company {
 

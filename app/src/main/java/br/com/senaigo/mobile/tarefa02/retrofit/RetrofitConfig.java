@@ -1,6 +1,7 @@
-package br.com.senaigo.mobile.tarefa01.retrofit;
+package br.com.senaigo.mobile.tarefa02.retrofit;
 
-import br.com.senaigo.mobile.tarefa01.service.UserService;
+import br.com.senaigo.mobile.tarefa02.service.UserService;
+import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 

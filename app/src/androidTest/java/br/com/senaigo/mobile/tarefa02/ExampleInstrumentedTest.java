@@ -1,4 +1,4 @@
-package br.com.senaigo.mobile.tarefa01;
+package br.com.senaigo.mobile.tarefa02;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

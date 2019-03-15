@@ -1,4 +1,4 @@
-package br.com.senaigo.mobile.tarefa01.atividades;
+package br.com.senaigo.mobile.tarefa02.atividades;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,11 +9,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.List;
-
-import br.com.senaigo.mobile.tarefa01.R;
-import br.com.senaigo.mobile.tarefa01.modelo.User;
-import br.com.senaigo.mobile.tarefa01.retrofit.RetrofitConfig;
+import br.com.senaigo.mobile.tarefa02.R;
+import br.com.senaigo.mobile.tarefa02.modelo.User;
+import br.com.senaigo.mobile.tarefa02.retrofit.RetrofitConfig;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -40,6 +38,7 @@ public class UserActivity extends AppCompatActivity {
                     public void onResponse(Call<User> call, Response<User> response) {
                         User user = response.body();
                         respostaIdUser.setText(user.getId().toString());
+                        Toast.makeText(UserActivity.this, "Obj = " + user.getName(), Toast.LENGTH_LONG).show();
                     }
 
                     @Override
