@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.List;
 
 import br.com.senaigo.mobile.tarefa01.R;
 import br.com.senaigo.mobile.tarefa01.modelo.User;
@@ -29,8 +32,8 @@ public class UserActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //Call<User> call = new RetrofitConfig().getUserService().getUser(respostaIdUser.getText());
-                Call<User> call = new RetrofitConfig().getUserService().getUser((String) respostaIdUser.getText());
+
+                Call<User> call = new RetrofitConfig().getUserService().getUser(respostaIdUser.getText().toString());
                 call.enqueue(new Callback<User>() {
 
                     @Override
@@ -47,6 +50,7 @@ public class UserActivity extends AppCompatActivity {
 
             }
         });
+
 
     }
 

@@ -10,7 +10,7 @@ public class RetrofitConfig {
 
     public RetrofitConfig() {
        this.retrofit = new Retrofit.Builder()
-               .baseUrl("https://jsonplaceholder.typicode.com")
+               .baseUrl("https://jsonplaceholder.typicode.com/")
                .addConverterFactory(JacksonConverterFactory.create())
                .build();
     }
