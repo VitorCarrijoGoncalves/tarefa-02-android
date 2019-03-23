@@ -1,6 +1,7 @@
 package br.com.senaigo.mobile.tarefa02.retrofit;
 
-import br.com.senaigo.mobile.tarefa02.service.UserService;
+import br.com.senaigo.mobile.tarefa02.modelo.Album;
+import br.com.senaigo.mobile.tarefa02.service.AlbumService;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
@@ -16,8 +17,12 @@ public class RetrofitConfig {
                .build();
     }
 
-    public UserService getUserService() {
-        return this.retrofit.create(UserService.class);
+//    public UserService getUserService() {
+//        return this.retrofit.create(UserService.class);
+//    }
+
+    public AlbumService getAlbumService() {
+        return this.retrofit.create(AlbumService.class);
     }
 
 }
