@@ -4,8 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.com.senaigo.mobile.tarefa02.atividades.ListViewActivity">
+    android:orientation="vertical">
 
+    <TextView
+        android:layout_height="wrap_content"
+        android:id="@+id/list_view_id_album"
+        android:textColor="#595959"
+        android:textSize="25sp"
+        android:layout_width="match_parent"/>
 
+    <TextView
+        android:layout_height="wrap_content"
+        android:id="@+id/list_view_user_id_album"
+        android:textColor="#595959"
+        android:textSize="25sp"
+        android:layout_width="match_parent"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:id="@+id/list_view_title_album"
+        android:textColor="#595959"
+        android:textSize="25sp"
+        android:layout_width="match_parent"/>
 
 </LinearLayout>

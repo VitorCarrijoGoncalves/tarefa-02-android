@@ -26,31 +26,30 @@ public class AlbumActivity extends DebugActivity {
 
     EditText txtIdAlbum;
     ListView simpleListView;
+    List<HashMap<String,String>> listAlbums = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album);
 
-        txtIdAlbum = findViewById(R.id.txt_id_album);
-
     }
 
-    public void exibir(View view) {
+    public void exibir(Album album) {
 
-        List<HashMap<String,String>> arrayList = new ArrayList<>();
-
-        String[] from={"title"};
-        int[] to={R.id.txt_id_album};
         simpleListView=(ListView)findViewById(R.id.simpleListView);
 
-        HashMap m = new HashMap();
+        HashMap<String, String> m = new HashMap();
 
-        txtIdAlbum = findViewById(R.id.txt_id_album);
+        m.put("id", String.valueOf(album.getId()));
+        m.put("userID", String.valueOf(album.getUserIdId()));
+        m.put("title", album.getTitle());
+        listAlbums.add(m);
 
-        m.put("title", txtIdAlbum.getText().toString());
-        arrayList.add(m);
-        SimpleAdapter simpleAdapter = new SimpleAdapter(this, arrayList, R.layout.activity_album, from, to);
+        String[] from={"id", "userID", "title"};
+        int[] to={R.id.list_view_id_album, R.id.list_view_user_id_album, R.id.list_view_title_album};
+
+        SimpleAdapter simpleAdapter = new SimpleAdapter(this, listAlbums, R.layout.activity_list_view, from, to);
         simpleListView.setAdapter(simpleAdapter);
     }
 
@@ -63,11 +62,10 @@ public class AlbumActivity extends DebugActivity {
             public void onResponse(Call<List<Album>> call, Response<List<Album>> response) {
                 List<Album> albums = response.body();
                 //respostaIdUser.setText(user.getId().toString());
-                //for (Album album : albums) {
-                    Album album = albums.get(0);
-                    exibir(view);
+                for (Album album : albums) {
+                    exibir(album);
                     //Toast.makeText(AlbumActivity.this, "Obj = " + album.getTitle(), Toast.LENGTH_LONG).show();
-                //}
+                }
 
             }
 
